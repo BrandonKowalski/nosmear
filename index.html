@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>No Smear</title>
+<meta name="description" content="Your favorite junk-drawer marker, now as a font!">
+<link rel="preload" href="fonts/NoSmear.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="bar at-top">
+  <a class="brand" href="#top">No Smear</a>
+  <nav>
+    <a href="#specimen">Specimen</a>
+    <a href="#playground">Playground</a>
+    <a href="#glyphs">Glyphs</a>
+    <a href="#variations">Variations</a>
+    <a href="#smeared">Smeared</a>
+  </nav>
+  <a class="button small" href="#download">Download</a>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="hero-main">
+    <div class="tape-wrap">
+      <div class="tape-anchor">
+        <div class="hero-tape"><h1 class="ink">No Smear</h1></div>
+        <div class="hero-under">
+          <div class="hero-copy">
+            <p class="lede ink">Your favorite <span class="nb">junk-drawer</span> marker, now as a font!</p>
+          </div>
+          <div class="note note-c" aria-hidden="true">
+            <svg viewBox="0 0 80 90"><path d="M52 86 C 54 60, 44 30, 24 8"/><path d="M14 24 L 23 6 L 40 14"/></svg>
+            <span class="ink smeared">I lied, it smears.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="scroll-cue" href="#specimen" aria-label="Scroll down">
+    <svg viewBox="0 0 60 120"><path d="M31 6 C 26 30, 36 54, 29 80 S 30 104, 31 112"/><path d="M12 90 C 20 98, 26 106, 31 113 C 36 104, 42 96, 50 88"/></svg>
+  </a>
+</section>
+
+<section class="poster" id="specimen">
+  <div class="poster-grid">
+    <div class="poster-aa">
+      <div class="tape"><span class="ink">Do not erase</span></div>
+      <p class="ink big">Aa</p>
+    </div>
+    <dl class="charset">
+      <div><dt>Uppercase</dt><dd class="ink">ABCDEFGHIJKLM<wbr>NOPQRSTUVWXYZ</dd></div>
+      <div><dt>Lowercase</dt><dd class="ink">abcdefghijklm<wbr>nopqrstuvwxyz</dd></div>
+      <div><dt>Figures &amp; symbols</dt><dd class="ink">0123456789 <wbr>!?&amp;@#$%*()</dd></div>
+    </dl>
+  </div>
+  <p class="ink poster-line">Be kind, please rewind.</p>
+</section>
+
+<section id="playground" class="block">
+  <div class="block-head">
+    <h2>Try it out!</h2>
+  </div>
+  <div class="controls">
+    <label class="range">Size <input id="size" type="range" min="24" max="200" value="88"><output id="size-out">88px</output></label>
+    <label class="switch"><input id="opt-calt" type="checkbox" checked><span>Variations</span></label>
+    <label class="switch"><input id="opt-ss01" type="checkbox"><span>Smeared</span></label>
+    <div class="swatches" role="radiogroup" aria-label="Surface">
+      <button class="swatch on" data-surface="paper" aria-label="Paper"></button>
+      <button class="swatch" data-surface="tape" aria-label="Masking tape"></button>
+      <button class="swatch" data-surface="sticker" aria-label="White sticker"></button>
+      <button class="swatch" data-surface="plastic" aria-label="Dark plastic"></button>
+    </div>
+  </div>
+  <div id="tester-area" class="tester surface-paper">
+    <p class="ink line" contenteditable="true" spellcheck="false">Why does this smell so good?</p>
+    <p class="ink line s2" contenteditable="true" spellcheck="false">DEEEEEEEP INHALE</p>
+    <p class="ink line s3" contenteditable="true" spellcheck="false">"Whether we wanted it or not, we've stepped into a war with the Cabal on Mars."</p>
+  </div>
+</section>
+
+<section id="glyphs" class="block">
+  <div class="block-head">
+    <h2>Glyphs</h2>
+    <p>Pick a character to see all five variations.</p>
+  </div>
+  <div class="glyph-layout">
+    <div class="glyph-focus">
+      <div id="focus-big" class="ink">a</div>
+      <div id="focus-variations" class="ink">aaaaa</div>
+      <dl class="glyph-meta">
+        <div><dt>Character</dt><dd id="focus-name">a</dd></div>
+        <div><dt>Unicode</dt><dd id="focus-code">U+0061</dd></div>
+      </dl>
+    </div>
+    <div id="glyph-grid" class="glyph-grid"></div>
+  </div>
+</section>
+
+<section id="variations" class="block split">
+  <div class="block-head">
+    <h2>Variety is the spice of life</h2>
+    <p>Every character has five variations that rotate as you type, so the same letter never looks the same twice in a row. It's the <code>calt</code> feature and it's on by default.</p>
+  </div>
+  <div class="compare">
+    <figure>
+      <figcaption>Variations off</figcaption>
+      <p class="ink compare-line" style="font-feature-settings: 'calt' 0">Hello hello</p>
+    </figure>
+    <figure>
+      <figcaption>Variations on (default)</figcaption>
+      <p class="ink compare-line">Hello hello</p>
+    </figure>
+  </div>
+</section>
+
+<section id="smeared" class="block split">
+  <div class="block-head">
+    <h2>No touching!</h2>
+    <p>Turn on stylistic set 1 (<code>ss01</code>) and the last letter of every word looks like you touched it before it dried.</p>
+<pre><code>.label {
+  font-family: "No Smear";
+  font-feature-settings: "ss01";
+}</code></pre>
+  </div>
+  <div class="compare">
+    <figure>
+      <figcaption>Regular</figcaption>
+      <p class="ink compare-line">Wet ink</p>
+    </figure>
+    <figure>
+      <figcaption>Smeared (ss01)</figcaption>
+      <p class="ink compare-line" style="font-feature-settings: 'ss01'">Wet ink</p>
+    </figure>
+  </div>
+</section>
+
+<section id="download" class="block download">
+  <div class="block-head">
+    <h2>Take it</h2>
+    <p>Free to use, commercial stuff included. Just don't sell the font.</p>
+  </div>
+  <div class="dl-cards">
+    <a class="dl-card" href="fonts/NoSmear.ttf" download>
+      <span class="dl-format">NoSmear.ttf</span>
+    </a>
+    <a class="dl-card" href="fonts/NoSmear.woff2" download>
+      <span class="dl-format">NoSmear.woff2</span>
+    </a>
+    <a class="dl-card" href="OFL.txt">
+      <span class="dl-format">OFL.txt</span>
+    </a>
+  </div>
+<pre><code>@font-face {
+  font-family: "No Smear";
+  src: url("NoSmear.woff2") format("woff2");
+  font-display: swap;
+}</code></pre>
+</section>
+
+</main>
+
+<footer class="foot">
+  <span class="ink">No Smear</span>
+  <span>&copy; 2026 Brandon T. Kowalski</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
